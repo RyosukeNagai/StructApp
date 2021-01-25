@@ -7,12 +7,21 @@
 
 import UIKit
 
+protocol SetOKDelegate {
+    func setOK(check:Person)
+}
+
 class NextViewController: UIViewController {
     
     //構造体を使う
     var person = Person()
     
-
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var shumiTextField: UITextField!
+    @IBOutlet weak var movieTextField: UITextField!
+    
+    var setOKDelegate:SetOKDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -20,6 +29,17 @@ class NextViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    
+    @IBAction func done(_ sender: Any) {
+        
+        person.name = nameTextField.text!
+        person.shumi = shumiTextField.text!
+        person.movie = movieTextField.text!
+        setOKDelegate?.setOK(check: person)
+        dismiss(animated: true, completion: nil)
+        
+    }
+    
     
 
     /*

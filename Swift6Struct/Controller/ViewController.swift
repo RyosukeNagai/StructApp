@@ -7,11 +7,13 @@
 
 import UIKit
 
-class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource  {
-    
+class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource,SetOKDelegate  {
     
     
     @IBOutlet weak var tableView: UITableView!
+    
+    var person = Person()
+    var personArray = [Person]()
     
     
 
@@ -26,7 +28,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return personArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -34,10 +36,15 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         let cell = tableView.dequeueReusableCell(withIdentifier:"Cell", for: indexPath)
         
         let userNameLabel = cell.contentView.viewWithTag(1) as! UILabel
+        userNameLabel.text = personArray[indexPath.row ].name
+        
         
         let shumiLabel = cell.contentView.viewWithTag(2) as! UILabel
+        shumiLabel.text = personArray[indexPath.row].shumi
+        
         
         let movieLabel = cell.contentView.viewWithTag(3) as! UILabel
+        movieLabel.text = personArray[indexPath.row].movie
         
         return cell
         
@@ -59,12 +66,23 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         
     }
     
+    func setOK(check: Person) {
+        
+        personArray.append(check)
+        tableView.reloadData()
+        
+    }
+    
+    
     //値を渡す
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == "next"{
             
-            //
+            //デリゲートの委任
+            let nextVC = segue.destination as!
+            NextViewController
+            nextVC.setOKDelegate = self
             
         }
         

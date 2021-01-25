@@ -113,11 +113,19 @@
                                 <state key="normal" title="決定">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="done:" destination="9Uq-Hg-0ar" eventType="touchUpInside" id="Ghk-IQ-SEZ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="xbF-Tm-EEv"/>
                         <color key="backgroundColor" systemColor="systemTealColor"/>
                     </view>
+                    <connections>
+                        <outlet property="movieTextField" destination="Rew-3h-MGu" id="c4K-DS-xSC"/>
+                        <outlet property="nameTextField" destination="qd2-rE-ujL" id="5Sz-3T-gkY"/>
+                        <outlet property="shumiTextField" destination="f1Y-pd-UXt" id="OQl-LX-S0V"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tMN-TO-RHZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
