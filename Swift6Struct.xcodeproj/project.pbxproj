@@ -14,6 +14,7 @@
 		CD2D64C025BED73200CA9D02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD2D64BF25BED73200CA9D02 /* Assets.xcassets */; };
 		CD2D64C325BED73200CA9D02 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD2D64C125BED73200CA9D02 /* LaunchScreen.storyboard */; };
 		CD2D64CD25BED8BD00CA9D02 /* NextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2D64CC25BED8BD00CA9D02 /* NextViewController.swift */; };
+		CDEAE02325BEF40F0059F7B8 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEAE02225BEF40F0059F7B8 /* Person.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		CD2D64C225BED73200CA9D02 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CD2D64C425BED73200CA9D02 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD2D64CC25BED8BD00CA9D02 /* NextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextViewController.swift; sourceTree = "<group>"; };
+		CDEAE02225BEF40F0059F7B8 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 			children = (
 				CD2D64B625BED72F00CA9D02 /* AppDelegate.swift */,
 				CD2D64B825BED72F00CA9D02 /* SceneDelegate.swift */,
+				CDEAE02525BEF4300059F7B8 /* Model */,
 				CD2D64CF25BED8DA00CA9D02 /* Controller */,
 				CD2D64BC25BED72F00CA9D02 /* Main.storyboard */,
 				CD2D64BF25BED73200CA9D02 /* Assets.xcassets */,
@@ -76,6 +79,14 @@
 				CD2D64CC25BED8BD00CA9D02 /* NextViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		CDEAE02525BEF4300059F7B8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CDEAE02225BEF40F0059F7B8 /* Person.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +159,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDEAE02325BEF40F0059F7B8 /* Person.swift in Sources */,
 				CD2D64BB25BED72F00CA9D02 /* ViewController.swift in Sources */,
 				CD2D64CD25BED8BD00CA9D02 /* NextViewController.swift in Sources */,
 				CD2D64B725BED72F00CA9D02 /* AppDelegate.swift in Sources */,

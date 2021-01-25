@@ -8,9 +8,15 @@
 import UIKit
 
 class NextViewController: UIViewController {
+    
+    //構造体を使う
+    var person = Person()
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
 
         // Do any additional setup after loading the view.
     }
